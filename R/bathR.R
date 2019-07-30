@@ -8,7 +8,7 @@
 #' bathR()
 bathR <- function( x = NULL){
   # random sample, if not explicit
-  if( is.null( x)) x <- sample( 1: length( bathR:::art ))
+  if( is.null( x)) x <- sample( 1: length( bathR:::art ), 1)
   # only allow 1:max()
   if( ! is.null(x)){
     if( x > length( bathR:::art )) stop( sprintf( "You've asked more than I can give! max( x) == %d", length( bathR:::art )))
