@@ -4,10 +4,10 @@
 \alias{bathR}
 \title{I am a bathR}
 \usage{
-bathR(bathRs = 1)
+bathR(x = NULL)
 }
 \arguments{
-\item{bathRs}{double The ASCII image you wish to print to the console}
+\item{x}{double The ASCII image you wish to print to the console}
 }
 \value{
 Some ASCI-bathing love

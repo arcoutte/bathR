@@ -1,14 +1,20 @@
 #' I am a bathR
 #'
 #' @return Some ASCI-bathing love
-#' @param bathRs double The ASCII image you wish to print to the console
+#' @param x double The ASCII image you wish to print to the console
 #' @export
 #'
 #' @examples
 #' bathR()
-bathR <- function( bathRs = 1){
-  if( bathRs > length( bathR:::art )) stop( sprintf( "You've asked more than I can give! max(bathRs) == %d", length( bathR:::art )))
-  eval( parse( text = sprintf("cat( bathR:::art$bath%d, sep = '\\n')", bathRs)))
+bathR <- function( x = NULL){
+  # random sample, if not explicit
+  if( is.null( x)) x <- sample( 1: length( bathR:::art ))
+  # only allow 1:max()
+  if( ! is.null(x)){
+    if( x > length( bathR:::art )) stop( sprintf( "You've asked more than I can give! max( x) == %d", length( bathR:::art )))
+  }
+  # cat your bathR
+  eval( parse( text = sprintf("cat( bathR:::art$bath%d, sep = '\\n')", x)))
 }
 
 
