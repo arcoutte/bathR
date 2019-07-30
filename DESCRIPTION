@@ -1,0 +1,11 @@
+Package: bathR
+Type: Package
+Title: ASCII bath output
+Version: 1.0.0
+Author: Arne C
+Maintainer: arne C <c_arne@hotmail.com>
+Description: Take a bath!
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
